@@ -1,0 +1,192 @@
+#contacto {
+    width: 100%;
+    background: url(../img/concrete.png) repeat;
+    position: relative;
+    text-align: center;
+}
+
+form {
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 40px 0;
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+    padding: 1rem 0 1rem .6rem;
+    border-radius:5px;
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3);
+    background:rgba(0,0,0,0.04);
+    border:1px solid rgba(0,0,0,.05);
+    color:rgb(116, 116, 116);
+    text-shadow:rgba(0, 0, 0, 0.06) 0px 1px 5px;
+    font-size: .9rem;
+    outline: none;
+    margin: .6rem 0;
+}
+
+input[type="checkbox"] {
+   z-index:99;
+   opacity: 0;
+   cursor: pointer;
+}
+
+input[type="checkbox"] + label {
+    vertical-align: middle;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label span {
+    display: inline-block;
+    width: .9rem;
+    height: .9rem;
+    border-radius:3px;
+    box-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(255,255,255,0.3), 0 0 0 0 rgba(47, 144, 223, 0.5);
+    background:rgba(0,0,0,0.04);
+    border:1px solid rgba(0,0,0,.05);
+    margin: 1px .6rem 0 -1.2rem;
+    transition: all .4s ease;
+}
+
+input[type="checkbox"]:hover + label span {
+    border-color: rgba(47, 144, 223, 0.75);
+}
+
+input[type="checkbox"]:checked + label span {
+    box-shadow:inset 4px 6px 10px -4px rgba(255, 255, 255, 0.3), 0 1px 1px -1px rgba(0, 0, 0, 0.3), 0 0 0 1.6rem rgba(47, 144, 223, 0);
+    background:rgba(47, 144, 223, 0.7);
+    border-radius: 50%;
+    border: 0px;
+}
+
+input[type="email"], input[type="tel"] {
+    -webkit-flex-basis: calc(50% - .6rem);
+    -ms-flex-basis: calc(50% - .6rem);
+    flex-basis: calc(50% - .6rem);
+}
+
+input[type="email"] {
+    margin-right: 1.2rem;
+}
+
+form div {
+    padding-right: 2rem;
+}
+
+input[type="submit"] {
+    width: 13rem;
+    height: 3rem;
+    background: none;
+    border: none;
+    color:#333;
+    text-transform:uppercase;
+    opacity:0.7;
+    outline: none;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 3rem;
+    cursor: pointer;
+    letter-spacing: .1rem;
+}
+
+.custom-submit{
+    width: 13rem;
+    position: relative;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .custom-submit > div { 
+    position:absolute;
+    top: 2.9rem;
+    width: 13rem;
+    height: .18rem;
+    background-color: #bbb;
+  }
+
+  #line1{transition: all .4s ease-in-out;}
+  #line3{transition: all .5s ease-in-out;}
+  #line4{transition: all .5s ease-in-out;}
+  
+  
+  .custom-submit:hover #line1
+  {
+   transform: translateY(-3rem) rotate(180deg);
+  }
+  
+  .custom-submit:hover #line3{
+      transform:translate(-3rem, -1.5rem) rotate(-90deg)  scale(0.55);
+      width: 7rem;
+      background-color: #333; 
+}
+  
+  .custom-submit:hover #line4{
+      transform:translate(9rem, -1.5rem) rotate(90deg) scale(0.55);
+      width: 7rem;
+      background-color: #333; 
+}
+
+p.check-explain {
+    width: 100%;
+    display: block;
+    padding: .8rem 0;
+}
+
+form > div {
+    min-width: 200px;
+    padding: .17rem 0;
+}
+
+p.name-help, p.email-help, p.phone-help, p.whoknown-help, p.comment-help, p.other-help {
+    width: 100%;
+    display: none;
+    font-size: .9rem;
+    color: red;
+}
+
+.other {
+    display: none;
+}
+
+.other-checked {
+    display: block;
+}
+
+p.validation-error {
+    display: block;
+    padding-bottom: .8rem;
+}
+
+div.response-container {
+    width: 100;
+    text-align: center;
+    padding: 2rem;
+}
+
+p.response {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    color: #333;
+}
+
+@media screen and (max-width: 462px) {
+    input[type="email"], input[type="tel"] {
+        width: 100%;
+    }
+
+    form > div {
+        min-width: 180px;
+    }
+    
+}

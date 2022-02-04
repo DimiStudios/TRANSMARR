@@ -1,0 +1,92 @@
+.player {
+    max-width: 852px;
+    position: relative;
+    margin: 0 auto;
+    max-height: 470px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    object-fit: contain;
+    -o-object-fit: contain;
+    transition: all .5s ease;
+}
+
+.player-controls {
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+
+.flex-item {
+    width: 3.4rem;
+    height: 3.4rem;
+    padding: .4rem;
+    margin: .4rem;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    align-items: center;
+    align-content: center;
+    display: inline-block; 
+    position: relative;   
+    background: none;
+}
+
+.player-button i {
+    color: rgba(255, 255, 255, .8);
+    font-size: 1.8rem;
+    position: absolute;
+    text-shadow:#000 0px 1px 5px;
+    text-shadow:inset 4px 6px 10px -4px rgba(0,0,0,0.3), 0 1px 1px -1px rgba(66, 134, 244,0.5);
+    top: 1.4rem;
+    left: 1.4rem;
+    transition: all .5s ease;
+    transform: opacity 1s ease;
+    opacity: 0;
+}
+
+.player-button i:hover, .player-button i:focus {
+    color: rgba(0, 0, 0, .75);
+    text-shadow:#fff 0px 1px 5px;
+    text-shadow:inset 4px 6px 10px -4px rgba(255,255,255,0.3), 0 1px 1px -1px rgba(66, 134, 244,0.5);
+}
+
+.player-button:focus {
+    outline: none;
+}
+
+.player-controls:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.player-controls:hover .player-button i {
+    opacity: 1;
+}
