@@ -557,7 +557,7 @@ nav > .overlay > ul > li a:hover::after {
 header > .header-full {
   background: #010101;
   height: 100vh;
-  background-image: url(../img/fotocamionfondo.png);
+  background-image: url(../img/fotocamionfondo1.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
